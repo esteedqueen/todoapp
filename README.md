@@ -1,24 +1,51 @@
-# README
+# Todo App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+TodoApp is a simple Rails application that allows you:
+ - create a task with description and status of "completed" or "uncompleted"
+ - mark task as completed
+ - view tasks list (completed & uncompleted)
 
-Things you may want to cover:
+This documents the steps that are necessary to get the application up and running on your machine
 
-* Ruby version
+## Prerequisites
 
-* System dependencies
+You're going to need:
 
-* Configuration
+  - Linux or OS X — Windows may work, but I'm not sure as this instruction is for Linux or OS X
+  - Ruby `version 2.5.1`
+  - Database - `postgreSQL`
+  - Bundler — If Ruby is already installed, but the bundle command doesn't work, just run gem install bundler in a terminal.
 
-* Database creation
+## Getting Set Up
 
-* Database initialization
+  1. Clone the repository
+```
+$ git clone git@github.com:esteedqueen/todoapp.git
+$ cd todoapp
 
-* How to run the test suite
+```
+  2. Run setup to install the gems configurations and setup the database.
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+$ bin/setup
 
-* Deployment instructions
+```
 
-* ...
+  3. Run rails server
+
+```
+$ rails s
+
+```
+
+## How to run the test suite
+  Run `rake` or `rspec` to run the full tests specs
+
+```
+$ rspec
+
+OR
+
+$ rake
+
+```
