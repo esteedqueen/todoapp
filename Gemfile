@@ -15,6 +15,7 @@ gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do
   gem 'factory_bot_rails'
+  gem 'pry'
   gem 'rspec-rails'
   gem 'rubocop', '~> 0.59.0', require: false
   gem 'shoulda-matchers'

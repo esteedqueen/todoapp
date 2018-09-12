@@ -1,0 +1,4 @@
+<%= form_for(@task) do |f| %>
+  <%= f.text_field :description, placeholder: 'Description' %>
+  <%= f.submit 'Add task', :disable_with => 'Adding task...' %>
+<% end -%>
