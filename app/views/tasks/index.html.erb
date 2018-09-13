@@ -24,20 +24,19 @@
   </div>
 
   <div class="column">
-    <h3>Completed tasks</h3>
+    <% if @completed_tasks.any? %>
     <table class="completed-tasks">
+      <caption>Completed tasks</caption>
       <tbody>
-        <% if @completed_tasks.any? %>
-          <% @completed_tasks.each do |task| %>
-            <tr>
-              <td class="task-item mark-as-complete">
-                <%= task.description %>
-              </td>
-            </tr>
-          <% end %>
+        <% @completed_tasks.each do |task| %>
+          <tr>
+            <td class="task-item mark-as-complete">
+              <%= task.description %>
+            </td>
+          </tr>
         <% end %>
       </tbody>
     </table>
+    <% end %>
   </div>
-
 <div>

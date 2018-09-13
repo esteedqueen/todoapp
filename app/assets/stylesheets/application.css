@@ -16,7 +16,7 @@
 
 
 .main-wrapper {
-  margin: auto 50px;
+  margin: auto 100px;
 }
 
 .clearfix:before, .clearfix:after {
@@ -63,6 +63,16 @@ table td {
   font-size: 1rem;
   line-height: 1.5;
   padding: 5px;
+  text-align: left;
+}
+
+table caption {
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
   text-align: left;
 }
 
@@ -122,4 +132,5 @@ button{
 
 .mark-as-complete {
   text-decoration: line-through;
+  background: #FDFDFE;
 }

@@ -16,6 +16,7 @@ feature 'User completes task' do
 
     within '.completed-tasks' do
       expect(page).to have_content('Write that article')
+      expect(page).not_to have_content('Buy groceries')
     end
   end
 end
