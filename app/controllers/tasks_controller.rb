@@ -1,6 +1,7 @@
 class TasksController < ApplicationController
   def index
-    @tasks = Task.all
+    @uncompleted_tasks = Task.uncompleted
+    @completed_tasks = Task.completed
     @task = Task.new
   end
 
@@ -12,6 +13,14 @@ class TasksController < ApplicationController
     else
       redirect_to root_path,
                   alert: "Task is invalid. #{@task.errors.full_messages.first}"
+    end
+  end
+
+  def complete
+    @task = Task.find(params[:id])
+    @task.status = 'completed'
+    if @task.save
+      redirect_to root_path, notice: 'Task completed'
     end
   end
 

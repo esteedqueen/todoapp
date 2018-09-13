@@ -62,7 +62,7 @@ table td {
   text-transform: none;
   font-size: 1rem;
   line-height: 1.5;
-  padding: 10px;
+  padding: 5px;
   text-align: left;
 }
 
@@ -107,7 +107,7 @@ button{
 }
 
 .description-field {
-  width: 84%;
+  width: 80%;
   padding: 5px;
 }
 
@@ -117,4 +117,9 @@ button{
 
 .column {
   flex: 50%;
+  margin: 20px
+}
+
+.mark-as-complete {
+  text-decoration: line-through;
 }
