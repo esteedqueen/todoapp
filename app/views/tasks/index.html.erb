@@ -1,2 +1,30 @@
-<h1>Task list</h1>
-<%= render 'form' %>
+<div class="row">
+  <div class="column">
+    <h3>Task list</h3>
+    <table>
+      <tbody>
+        <% if @tasks.any? %>
+          <% @tasks.each do |task| %>
+            <tr>
+              <td>
+                <span class="left">
+                  <%= task.description %>
+                </span>
+                <span class="right">
+                  <%= button_to 'Complete', task, method: :complete, :class => 'btn btn-primary' %>
+                </span>
+              </td>
+            </tr>
+          <% end %>
+        <% end %>
+
+        <tr><td><%= render 'form' %></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="column">
+    <h3>Completed tasks</h3>
+  </div>
+
+<div>
